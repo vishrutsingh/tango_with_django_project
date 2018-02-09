@@ -1,0 +1,23 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+	About
+{% endblock %}
+
+{% block body_block %}
+	<div>
+		<h1> This is the About Page </h1>
+                <link rel="stylesheet" href="{% static "css/base.css" %}" />
+                <script src="{% static "js/jquery.js" %}"></script>
+        </head>
+
+        <body>
+		<div>
+			This tutorial has been put together by Milo Krawiec. <br />
+		</div>
+		<div>
+			You have visited this site on <strong>{{ visits }}</strong> occasion(s). <br />
+		</div>
+                <img src="{% static "images/picture.jpg" %}" alt="Picture of a picture" />
+		<img src="{{ MEDIA_URL}}cat.jpg" alt="Picture of a cat"/>
+{% endblock %}
